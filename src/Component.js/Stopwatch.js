@@ -9,12 +9,13 @@
 
 
 
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import '../App.css';
 export default class Stopwatch extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          counter: 0,
+          counter:null,
           paused: true
         }
       }
@@ -56,7 +57,7 @@ export default class Stopwatch extends Component {
     render() {
         return (
             <div>
-                <h1 style={{color:'blue'}} >Time : {this.state.counter}</h1>
+                <h1 style={{color:'yellow'}} >{this.state.counter}</h1>
               <div className='btn-grid'>
                 <button className='button' onClick= {this.startCount}>Start</button>
                 <button className='button' onClick= {this.pauseCount}>Pause</button>
