@@ -1,3 +1,18 @@
+// Pseudocode
+// Let Create class component --> DateTimer
+// We nned to state --> runningtime and status
+// status tell timer mode pause or unpause
+// runningtime indicates runningtime
+//Create two buttons start/pause and rerset
+// Create event function handleEvent --> which handle pause and unpause
+// Setup method to count running time ---> save start time by collecting a diffrence from dateNow - running time
+// Set up method Running time by Dat.Now - Starting time
+// Set up reset function by updating state
+// Set up Day,Hours, Month and second calculation
+//Don't put millisecong which vibrating display continuously
+
+
+
 import React, { Component } from "react";
 
 export default class extends Component {
