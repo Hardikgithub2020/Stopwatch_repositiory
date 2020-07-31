@@ -19,7 +19,7 @@ export default class extends Component {
         this.timer = setInterval(() => {
           this.setState({ runningTime: Date.now() - startTime, status: true });
           
-        },1000);
+        },10);
       } 
     
   }
@@ -30,12 +30,18 @@ export default class extends Component {
           status : false
       })
   }
+
   render() {
+    let days = Math.floor(this.state.runningTime / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((this.state.runningTime / (1000 * 60 * 60)) % 24);
+    let minutes = Math.floor((this.state.runningTime / 1000 / 60) % 60);
+    let seconds = Math.floor((this.state.runningTime / 1000) % 60);
+    let milliSeconds = Math.floor((this.state.runningTime / 100) % 10);
     return (
       <div>
         <button onClick={this.handleEvent}>Click</button>
         <button onClick={this.handleReset}>Reset</button>
-        <h1>{Math.floor(this.state.runningTime / 1000)}</h1>
+        <h1>{days+':'+hours+':'+minutes+':'+seconds}</h1>
 
         
       </div>
