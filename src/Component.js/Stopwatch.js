@@ -56,7 +56,7 @@ export default class Stopwatch extends Component {
     render() {
         return (
             <div>
-                <h1>Time : {this.state.counter}</h1>
+                <h1 style={{color:'blue'}} >Time : {this.state.counter}</h1>
               <div className='btn-grid'>
                 <button className='button' onClick= {this.startCount}>Start</button>
                 <button className='button' onClick= {this.pauseCount}>Pause</button>
