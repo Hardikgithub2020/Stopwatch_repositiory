@@ -57,12 +57,12 @@ export default class Stopwatch extends Component {
     render() {
         return (
             <div>
-                <h1 style={{color:'yellow'}} >{this.state.counter}</h1>
               <div className='btn-grid'>
                 <button className='button' onClick= {this.startCount}>Start</button>
                 <button className='button' onClick= {this.pauseCount}>Pause</button>
                 <button className='button' onClick= {this.restartCount}>Restart</button>
               </div>
+              <h1 style={{color:'yellow'}} >{this.state.counter}</h1>
             </div>
         )
     }

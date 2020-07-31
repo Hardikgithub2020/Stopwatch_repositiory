@@ -65,7 +65,7 @@ export default class extends Component {
       <div>
         <button onClick={this.handleEvent}>Timer</button>
         <button onClick={this.handleReset}>Reset</button>
-        <h1>{this.state.timeDisplay}</h1>
+        <h1 style={{color:'yellow'}}>{this.state.timeDisplay}</h1>
       </div>
     );
   }
